@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * this class represents a composition that can be played at a concert
  * @author Team 2
  */
-public class Composition {
+public class Composition extends Id {
 
 	/* CONSTRUCTORS	-----------------------------------------------------*/
 	
@@ -26,14 +26,6 @@ public class Composition {
 	/* ACCESSORS	-----------------------------------------------------*/
 	
 	/**
-	 * getter for id
-	 * @return Id with an id number
-	 */
-	public Id getId() {
-		return id;
-	}
-	
-	/**
 	 * getter for movements
 	 * @return ArrayList of movements included in the composition
 	 */
@@ -41,16 +33,8 @@ public class Composition {
 		return movements;
 	}
 		
-
 	/* MODIFIERS	-----------------------------------------------------*/
 	
-	/**
-	 * Setter for id
-	 * @param id
-	 */
-	public void setId(Id id) {
-		this.id = id;
-	}
 	
 	/**
 	 * setter for movements 
@@ -67,14 +51,10 @@ public class Composition {
 	 */
 	@Override
 	public String toString() {
-		return "Composition [id=" + id + ", movements=" + movements + "]";
+		return "Composition [movements=" + movements + "]";
 	}
 			
 	/* ATTRIBUTES--------------------------------------------------------*/
-	/**
-	 * unique id for the composition
-	 */
-	private Id id = new Id();
 	
 	/**
 	 * represents an ArrayList of Movements in the composition

@@ -4,7 +4,7 @@ package symphony;
  * @author Team2
  *
  */
-public class Conductor extends Musician {
+public class Conductor extends Musician  {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
 	

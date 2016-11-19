@@ -1,5 +1,6 @@
 package symphony;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 /**
@@ -55,6 +56,14 @@ public class Venue {
 	public ArrayList<Ticket> getTickets() {
 		return tickets;
 	}
+	
+	/**
+	 * getter for transaction
+	 * @return transaction
+	 */
+	public FinancialTransaction getTransaction() {
+		return transaction;
+	}
 
 	/* MODIFIERS	-----------------------------------------------------*/
 		
@@ -81,36 +90,54 @@ public class Venue {
 	public void setTickets(ArrayList<Ticket> tickets) {
 		this.tickets = tickets;
 	}
+	
+	/**
+	 * setter for transaction
+	 * @param transaction
+	 */
+	public void setTransaction(FinancialTransaction transaction) {
+		this.transaction = transaction;
+	}
 
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	
 	/**
-	 * method to initiate a financial transaction to sell a ticket
+	 * sell a ticket for a concert
+	 * @param ticket
 	 */
-	public void sellTicket(){
+	public void sellTicket(Ticket ticket){
+		ticket.setSold(true);
 		
-		//********:TODO****************
 	}
 	
 	/**
-	 * method to initiate a financial transaction to refund a ticket
+	 * refund ticket sets ticket sold to false, changes transaction type to refund
+	 * @param transaction
+	 * @param ticket
+	 * @return amount refunded
 	 */
-	public void refundTicket(){
-		
-		//*********:TODO****************
+	public Double refundTicket(FinancialTransaction transaction, Ticket ticket){
+		ticket.setSold(false);
+		transaction.getTicket().setSold(false);
+		transaction.setTransactionType("refund");
+		return transaction.getAmount();
 	}
 	
 	/**
 	 * override method for toString()
 	 */
+	
 	@Override
 	public String toString() {
-		return "Venue [venueName=" + venueName + ", capacity=" + capacity
-				+ ", tickets=" + tickets + "]";
+		return "Venue [transaction=" + transaction + ", venueName=" + venueName
+				+ ", capacity=" + capacity + ", tickets=" + tickets + "]";
 	}
 	
 	/* ATTRIBUTES--------------------------------------------------------*/
-	
+	/**
+	 * financial transaction
+	 */
+	private FinancialTransaction transaction;
 	/**
 	 * name of the venue
 	 */
