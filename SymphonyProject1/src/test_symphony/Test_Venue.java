@@ -125,6 +125,18 @@ public class Test_Venue extends TestCase{
 		assertEquals(venue.getVenueName() , "THENAME");
 		
 	}
+	/* STAND-ALONE ENTRY POINT ----------------------------------------- */
+	/**
+	 * Main line for stand-alone operation.
+	 * 
+	 * @param args
+	 *            Standard string command line parameters.
+	 */
+	public static void  main(String[] args) {
+		System.out.println("Executing Test_Venue suite");
+		junit.textui.TestRunner.run(suite());
+		
+	}
 	private ArrayList<Ticket> tick = new ArrayList<Ticket>();
 	private Date d = new Date();
 	private Venue venue = new Venue();
