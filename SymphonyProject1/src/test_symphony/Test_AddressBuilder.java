@@ -1,7 +1,5 @@
 package test_symphony;
 
-import java.text.ParseException;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

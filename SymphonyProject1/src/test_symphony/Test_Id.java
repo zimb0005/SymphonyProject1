@@ -12,13 +12,13 @@ public class Test_Id extends TestCase{
 
 	public static Test suite() { return new TestSuite(Test_Id.class);		}
 	@BeforeClass
-	protected void setUpBeforeClass() throws Exception { 
+	protected void setUp() throws Exception { 
 		System.out.println("Test_Id Begin");
 		id = new Id();
 		
 	}
 	@AfterClass
-	protected void tearDownAfterClass() throws Exception { 
+	protected void tearDown() throws Exception { 
 		System.out.println("Test_Id End");
 		id = null;
 	}
