@@ -15,11 +15,12 @@ public class Composition extends Id {
 	 */
 	public Composition(){
 		super();
+		setMovements( new ArrayList<Movement>() ); // set empty array if none is given in constructor
 	}
 	
 	public Composition(ArrayList<Movement> movements){
 		super();
-		this.movements = movements;
+		setMovements(movements); // set array given in constructor
 	}
 	
 
