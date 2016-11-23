@@ -25,7 +25,6 @@ public class Perform {
 	public Perform(Soloist soloist,Composition composition){
 		this.soloist = soloist;
 		this.composition = composition;
-//		this.datePerformed = datePerformed;
 	}
 	/* ACCESSORS	-----------------------------------------------------*/
 	
@@ -94,15 +93,7 @@ public class Perform {
 		return composition.getId();
 	}
 	
-	
 
-//	/**
-//	 * getter for datePerformed
-//	 * @return datePerformed
-//	 */
-//	public Date getDatePerformed() {
-//		return datePerformed;
-//	}
 
 	/* MODIFIERS	-----------------------------------------------------*/
 	
@@ -121,14 +112,7 @@ public class Perform {
 	public void setSoloist(Soloist soloist) {
 		this.soloist = soloist;
 	}
-	
-//	/**
-//	 * setter for datePerformed
-//	 * @param datePerformed
-//	 */
-//	public void setDatePerformed(Date datePerformed) {
-//		this.datePerformed = datePerformed;
-//	}
+
 	
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	
@@ -153,10 +137,6 @@ public class Perform {
 	 */
 	private Composition composition;
 	
-//	/**
-//	 * date that soloist last performed the composition
-//	 */
-//	private Date datePerformed;
 		
 	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 

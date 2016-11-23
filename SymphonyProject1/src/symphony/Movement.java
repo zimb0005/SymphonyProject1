@@ -81,12 +81,17 @@ public class Movement {
 
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	
+	//Edited By Omar
+	/**
+	 * toString should have a date element to be passed
+	 * [number + name + date]
+	 */
 	/**
 	 * Override method for toString()
 	 */
 	@Override
 	public String toString() {
-		return "Movement [number=" + number + ", name=" + name + "]";
+		return "Movement [number=" + number + ", name=" + name + ", date="+ datePerformed +"]\n\t";
 	}
 		
 	/* ATTRIBUTES--------------------------------------------------------*/
