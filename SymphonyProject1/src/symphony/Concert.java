@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  */
 
-public class Concert {
+public class Concert extends Id {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
 	
@@ -36,14 +36,6 @@ public class Concert {
 	}
 	
 	/**
-	 * Getter for id
-	 * @return Id of concert
-	 */
-	public Id getId() {
-		return id;
-	}
-	
-	/**
 	 * getter for compositions
 	 * @return list of compositions in concert
 	 */
@@ -68,13 +60,6 @@ public class Concert {
 		this.conductor = conductor;
 	}
 	
-	/**
-	 * setter for id
-	 * @param id
-	 */
-	public void setId(Id id) {
-		this.id = id;
-	}
 	
 	/**
 	 * setter for compositions
@@ -147,7 +132,7 @@ public class Concert {
 	 */
 	@Override
 	public String toString() {
-		return "Concert [conductor=" + conductor + ", id=" + id
+		return "Concert [conductor=" + conductor 
 				+ ", compositions=" + compositions + "]";
 	}
 		
@@ -158,10 +143,7 @@ public class Concert {
 	 * represents a conductor of the concert
 	 */
 	private Conductor conductor;
-	/**
-	 * unique id for the concert
-	 */
-	private Id id = new Id();
+	
 	/**
 	 * represents the list of compositions in the concert
 	 */
