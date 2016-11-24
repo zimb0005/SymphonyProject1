@@ -2,8 +2,11 @@ package test_symphony;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import junit.framework.*;
 import symphony.Id;
+import static org.junit.Assert.*;
+
 /**
  * JUnit 4 Test Case for the Id class in the symphony package.
  * @author Team 4
