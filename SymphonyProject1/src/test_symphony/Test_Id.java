@@ -1,7 +1,7 @@
 package test_symphony;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import junit.framework.*;
 import symphony.Id;
 /**
@@ -13,13 +13,13 @@ public class Test_Id {
 
 	
 	@Before
-	public void setUp() throws Exception { 
+	public void setUp()  { 
 		System.out.println("Test_Id Begin");
 		id = new Id();
 		
 	}
 	@After
-	public void tearDown() throws Exception { 
+	public void tearDown()  { 
 		System.out.println("Test_Id End");
 		id = null;
 	}
