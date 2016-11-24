@@ -2,23 +2,24 @@ package test_symphony;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-
 import junit.framework.*;
 import symphony.Id;
+/**
+ * JUnit 4 Test Case for the Id class in the symphony package.
+ * @author Team 4
+ *
+ */
+public class Test_Id {
 
-public class Test_Id extends TestCase{
-
-	public Test_Id(String name) { super(name);	}
-
-	public static Test suite() { return new TestSuite(Test_Id.class);		}
-	@BeforeClass
-	protected void setUp() throws Exception { 
+	
+	@Before
+	public void setUp() throws Exception { 
 		System.out.println("Test_Id Begin");
 		id = new Id();
 		
 	}
-	@AfterClass
-	protected void tearDown() throws Exception { 
+	@After
+	public void tearDown() throws Exception { 
 		System.out.println("Test_Id End");
 		id = null;
 	}
@@ -26,7 +27,7 @@ public class Test_Id extends TestCase{
 	/**
 	 * Test the constructors.
 	 */
-	
+	@Test
 	public void testConstructors() {
 		System.out.println("\tExecuting idTest.testConstructors");
 		assertNotNull("\t\tIdTest.testConstructors: Address is null", id);
@@ -36,7 +37,7 @@ public class Test_Id extends TestCase{
 	/**
 	 * Test the accessors.
 	 */
-	
+	@Test
 	public void testAccessors() {
 		System.out.println("\tExecuting idTest.testAccessors");
 		assertEquals(id.getId(),1);
@@ -46,7 +47,7 @@ public class Test_Id extends TestCase{
 	/**
 	 * Test the mutators/modifiers.
 	 */
-	
+	@Test
 	public void testMutators() {
 		System.out.println("\tExecuting idTest.testMutators");
 		id.setId(3);
@@ -56,7 +57,7 @@ public class Test_Id extends TestCase{
 	/**
 	 * Test behaviors.
 	 */
-	
+	@Test
 	public void testBehaviors() {
 		System.out.println("\tExecuting idTest.testBehaviors");
 		assertEquals(id.toString(),"Id [id=3]");
