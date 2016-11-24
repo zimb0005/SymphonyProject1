@@ -1,5 +1,6 @@
 package symphony;
 
+
 public class Id {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
