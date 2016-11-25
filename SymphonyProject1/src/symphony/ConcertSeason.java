@@ -85,17 +85,19 @@ public class ConcertSeason {
 	/**
 	 * adds concert to season
 	 */
-	public void addConcert(){
+	public void addConcert(Concert con) {
+		if (getConcerts() == null) setConcerts(new ArrayList<Concert>());
 		
-		//****:TODO*****
+		getConcerts().add(con);
 	}
 	
 	/**
 	 * removes concert to season
 	 */
-	public void removeConcert(){
-		
-		//****:TODO*****
+	public void removeConcert(Concert con) {
+		if (getConcerts() != null) {
+			getConcerts().remove(con);
+		}
 	}
 	
 	/**

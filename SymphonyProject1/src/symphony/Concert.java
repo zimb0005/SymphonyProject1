@@ -91,9 +91,10 @@ public class Concert extends Id {
 	/**
 	 * removes composition from a concert
 	 */
-	public void removeComposition(){
-		
-		//*****:TODO********
+	public void removeComposition(Composition comp){
+		if (getCompositions() != null) {
+			getCompositions().remove(comp);
+		}
 	}
 	
 	/**
@@ -109,20 +110,21 @@ public class Concert extends Id {
 	/**
 	 * removes performance from a concert
 	 */
-	public void removePerformance(){
-		
-		//*****:TODO********
+	public void removePerformance(Perform perf){
+		if (getPerformances() != null) {
+			getPerformances().remove(perf);
+		}
 	}
 	
 	// TODO TODO TODO
-//	/**
-//	 * Override method for toString()
-//	 */
-//	@Override
-//	public String toString() {
-//		return "Concert [conductor=" + conductor 
-//				+ ", compositions=" + compositions + "]";
-//	}
+	/**
+	 * Override method for toString()
+	 */
+	@Override
+	public String toString() {
+		return "Concert [conductor=" + conductor 
+				+ ", compositions=" + compositions + "]";
+	}
 		
 		
 	/* ATTRIBUTES--------------------------------------------------------*/
