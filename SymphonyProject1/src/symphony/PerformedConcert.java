@@ -1,6 +1,6 @@
 package symphony;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * class represents a performed concert so it will have a past date

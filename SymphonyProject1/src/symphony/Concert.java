@@ -15,15 +15,13 @@ public class Concert extends Id {
 	/**
 	 * default constructor
 	 */
-	public Concert(){
-		super();
+	public Concert() {
 	}
 	
-	public Concert(Conductor conductor,ArrayList<Composition> compositions,ArrayList<Perform> performs){
-		super();
-		this.compositions = compositions;
-		this.conductor = conductor;
-		this.performs = performs;
+	public Concert(Conductor conductor, ArrayList<Composition> compositions, ArrayList<Perform> performs){
+		setCompositions( compositions );
+		setConductor( conductor );
+		setPerformances( performs );
 	}
 	/* ACCESSORS	-----------------------------------------------------*/
 	
@@ -47,8 +45,8 @@ public class Concert extends Id {
 	 * getter for performs
 	 * @return list of performances of compositions by a soloist in a concert
 	 */
-	public ArrayList<Perform> getPerfoms() {
-		return performs;
+	public ArrayList<Perform> getPerformances() {
+		return performances;
 	}
 	/* MODIFIERS	-----------------------------------------------------*/
 	
@@ -73,8 +71,8 @@ public class Concert extends Id {
 	 * setter for performs
 	 * @param performs
 	 */
-	public void setPerforms(ArrayList<Perform> performs) {
-		this.performs = performs;
+	public void setPerformances(ArrayList<Perform> performs) {
+		this.performances = performs;
 	}
 	
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
@@ -82,9 +80,12 @@ public class Concert extends Id {
 	/**
 	 * adds a composition to the concert
 	 */
-	public void addComposition(){
+	public void addComposition(Composition comp){
+		// if the composition list doesn't exist, create it
+		if (getCompositions() == null) setCompositions(new ArrayList<Composition>());
 		
-		//*****:TODO********
+		// add the given composition to the list
+		getCompositions().add(comp);
 	}
 
 	/**
@@ -96,27 +97,13 @@ public class Concert extends Id {
 	}
 	
 	/**
-	 * adds a conductor to the concert
-	 */
-	public void addConductor(){
-		
-		//*****:TODO********
-	}
-
-	/**
-	 * removes conductor from a concert
-	 */
-	public void removeConductor(){
-		
-		//*****:TODO********
-	}
-	
-	/**
 	 * adds a performance to the concert
 	 */
-	public void addPerform(){
+	public void addPerformance(Perform perf){
+		// if the performance list doesn't exist, create it
+		if (getPerformances() == null) setPerformances(new ArrayList<Perform>());
 		
-		//*****:TODO********
+		getPerformances().add(perf);
 	}
 
 	/**
@@ -127,14 +114,15 @@ public class Concert extends Id {
 		//*****:TODO********
 	}
 	
-	/**
-	 * Override method for toString()
-	 */
-	@Override
-	public String toString() {
-		return "Concert [conductor=" + conductor 
-				+ ", compositions=" + compositions + "]";
-	}
+	// TODO TODO TODO
+//	/**
+//	 * Override method for toString()
+//	 */
+//	@Override
+//	public String toString() {
+//		return "Concert [conductor=" + conductor 
+//				+ ", compositions=" + compositions + "]";
+//	}
 		
 		
 	/* ATTRIBUTES--------------------------------------------------------*/
@@ -152,7 +140,7 @@ public class Concert extends Id {
 	/**
 	 * list of compositions to be played by specific soloists
 	 */
-	private ArrayList<Perform> performs;	
+	private ArrayList<Perform> performances;	
 	
 	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 

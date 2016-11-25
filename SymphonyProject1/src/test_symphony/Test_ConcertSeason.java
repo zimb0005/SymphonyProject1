@@ -38,7 +38,7 @@ public class Test_ConcertSeason {
 		// constructor with parameters
 		Calendar cal = Calendar.getInstance();
 		cal.set(1990, 7, 28); // using my birthday as a test date :) (7 is august cause months start at 0?) -ian
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		concertSeason = new ConcertSeason( cal.getTime(), 1 );
 		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": ConcertSeason created", concertSeason);
@@ -68,14 +68,13 @@ public class Test_ConcertSeason {
 		);
 		
 		// test getLengthInDays()
-		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Opening date retrieved", 1, concertSeason.getLengthInDays());
+		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Length in days retrieved", 1, concertSeason.getLengthInDays());
 		
 		// add concert list for the next test
 		concertSeason.setConcerts( new ArrayList<Concert>() );
 		
 		// test getConcerts()
 		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": Concert list acquired", concertSeason.getConcerts());
-		
 	}
 	
 	/**
@@ -86,7 +85,52 @@ public class Test_ConcertSeason {
 		String TEST_BLOCK = ".testMutators";
 		System.out.println("\tExecuting " + TEST_NAME + TEST_BLOCK);
 		
-		//
+		// default constructor		
+		concertSeason = new ConcertSeason();
+		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": ConcertSeason created", concertSeason);
+		
+		// test setOpeningDate()
+		Calendar cal = Calendar.getInstance();
+		cal.set(1990, 7, 28); // using my birthday as a test date :) (7 is august cause months start at 0?) -ian
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		
+		concertSeason.setOpeningDate( cal.getTime() );
+		
+		assertEquals(
+			"\t\t" + TEST_NAME + TEST_BLOCK + ": Opening date set and retrieved",
+			"1990-08-28",
+			sdf.format(concertSeason.getOpeningDate())
+		);
+		
+		// test setLengthInDays()
+		concertSeason.setLengthInDays(22);
+		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Length in days set and retrieved", 22, concertSeason.getLengthInDays());
+		
+		// test setConcerts()
+		concertSeason.setConcerts( new ArrayList<Concert>() );
+		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": Concert list acquired", concertSeason.getConcerts());
+	}
+	
+	
+	
+	/* NORMAL BEHAVIOR -------------------------------------------------*/
+	/**
+	 * Test the normal behaviour.
+	 */
+	@Test
+	public void testNormalBehaviour() {
+		String TEST_BLOCK = ".testNormalBehaviour";
+		System.out.println("\tExecuting " + TEST_NAME + TEST_BLOCK);
+		
+		// default constructor		
+		concertSeason = new ConcertSeason();
+		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": ConcertSeason created", concertSeason);
+		
+		// test addConcert
+		// TODO
+		
+		// test removeConcert
+		// TODO
 	}
 	
 	/* ATTRIBUTES	-----------------------------------------------	*/
