@@ -21,7 +21,7 @@ public class Perform {
 	/**
 	 * overloaded constructor
 	 */
-	public Perform(Soloist soloist,Composition composition, Date datePerformed){
+	public Perform(Soloist soloist,Composition composition,Date datePerformed){
 		this.soloist = soloist;
 		this.composition = composition;
 		this.datePerformed = datePerformed;
