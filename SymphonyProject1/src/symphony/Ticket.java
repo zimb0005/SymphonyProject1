@@ -49,6 +49,13 @@ public class Ticket {
 	public int getSeatNum() {
 		return seatNum;
 	}
+	/**
+	 * getter for sold
+	 * @return sold (true or false)
+	 */
+	public boolean getSold(){
+		return sold;
+	}
 
 	/**
 	 * getter for date

@@ -27,6 +27,7 @@ public class ScheduledConcert extends Concert{
 		super();
 		this.dateScheduled = dateScheduled;
 		this.venue = venue;
+	
 	}
 	
 	/* MODIFIER --------------------------------------*/
