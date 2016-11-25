@@ -89,7 +89,7 @@ public class Test_Concert extends TestCase{
 		
 		System.out.println("\tExecuting Test_" + name + ".testBehaviors: " + name + ".toString");
 		System.out.println(concert.toString());
-		assertTrue("\t\t" + name + ".toString: " + name + ".toString is blank", (concert.toString() != ""));
+		assertTrue("\t\t" + name + ".toString: " + name + ".toString is blank", (!concert.toString().equals("")));
 		
 		System.out.println("\tExecuting Test_" + name + ".testBehaviors: " + name + ".addComposition");
 		concert.addComposition(composition);

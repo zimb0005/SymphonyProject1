@@ -5,7 +5,6 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import symphony.Address;
 import symphony.Conductor;
-import symphony.Id;
 import symphony.Name;
 import symphony.PhoneNumber;
 
