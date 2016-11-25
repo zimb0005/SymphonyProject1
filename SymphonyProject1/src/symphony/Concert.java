@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class Concert extends Id {
 	
+	
+	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
 	
 	/**
@@ -23,6 +25,9 @@ public class Concert extends Id {
 		setConductor( conductor );
 		setPerformances( performs );
 	}
+	
+	
+	
 	/* ACCESSORS	-----------------------------------------------------*/
 	
 	/**
@@ -48,6 +53,9 @@ public class Concert extends Id {
 	public ArrayList<Perform> getPerformances() {
 		return performances;
 	}
+	
+	
+	
 	/* MODIFIERS	-----------------------------------------------------*/
 	
 	/**
@@ -74,6 +82,8 @@ public class Concert extends Id {
 	public void setPerformances(ArrayList<Perform> performs) {
 		this.performances = performs;
 	}
+	
+	
 	
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	
@@ -116,7 +126,6 @@ public class Concert extends Id {
 		}
 	}
 	
-	// TODO TODO TODO
 	/**
 	 * Override method for toString()
 	 */
@@ -125,8 +134,9 @@ public class Concert extends Id {
 		return "Concert [conductor=" + conductor 
 				+ ", compositions=" + compositions + "]";
 	}
-		
-		
+	
+	
+	
 	/* ATTRIBUTES--------------------------------------------------------*/
 	
 	/**
@@ -143,6 +153,8 @@ public class Concert extends Id {
 	 * list of compositions to be played by specific soloists
 	 */
 	private ArrayList<Perform> performances;	
+	
+	
 	
 	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 
