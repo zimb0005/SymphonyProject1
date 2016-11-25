@@ -22,9 +22,10 @@ public class Perform {
 	/**
 	 * overloaded constructor
 	 */
-	public Perform(Soloist soloist,Composition composition){
+	public Perform(Soloist soloist,Composition composition, Date datePerformed){
 		this.soloist = soloist;
 		this.composition = composition;
+		this.datePerformed = datePerformed;
 	}
 	/* ACCESSORS	-----------------------------------------------------*/
 	
@@ -40,7 +41,7 @@ public class Perform {
 	 * getter for soloist name
 	 * @return the name of the soloist
 	 */
-	public Name getSoilistName(){
+	public Name getSoloistName(){
 		return soloist.getName();
 	}
 	/**
@@ -67,7 +68,7 @@ public class Perform {
 		return soloist.getSpecialty();
 	}
 	
-	public int getSoloistid(){
+	public int getSoloistId(){
 		return soloist.getId();
 	}
 	
@@ -89,10 +90,16 @@ public class Perform {
 	 * getter to get the composition ID
 	 * @return composition id
 	 */
-	public int getCompositionid(){
+	public int getCompositionId(){
 		return composition.getId();
 	}
-	
+	/**
+	 * getter for the last date the soloist has performed a specific composition
+	 * @return date performed
+	 */
+	public Date getDatePerformed(){
+		return datePerformed;
+	}
 
 
 	/* MODIFIERS	-----------------------------------------------------*/
@@ -111,6 +118,13 @@ public class Perform {
 	 */
 	public void setSoloist(Soloist soloist) {
 		this.soloist = soloist;
+	}
+	/**
+	 * setter for datePerformed
+	 * @param datePerformed
+	 */
+	public void setdatePerformed(Date datePerformed) {
+		this.datePerformed = datePerformed;
 	}
 
 	
@@ -136,6 +150,10 @@ public class Perform {
 	 * composition performed by soloist
 	 */
 	private Composition composition;
+	/**
+	 * date the soloistLast performed the Composition
+	 */
+	private Date datePerformed;
 	
 		
 	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/

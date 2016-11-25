@@ -8,7 +8,7 @@ import junit.framework.Test;
  * Unit test class.  Exercises all of the constructors and methods for the
  * class PhoneNumber.
  * 
- * @author Emma Jilesen
+ * @author Emma Jilesen  
  * @version	1.0.0	November 2016
  */
 public class Test_PhoneNumber extends TestCase {

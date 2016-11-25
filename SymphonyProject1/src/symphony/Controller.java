@@ -25,20 +25,28 @@ public class Controller {
 	/**
 	 * method to add a concert to a season
 	 */
-	public static void addConcert(){
-		
-		//*******:TODO**********************
+	public void addConcert(){
+	season.addConcert(concert);
 	}
 	
-	public static void removeConcert(){
-		
-		//*******:TODO**********************
-		
-	}
+	public static void removeConcert(){};
 		
 	/* ATTRIBUTES--------------------------------------------------------*/
-		
+		private SampleData data = new SampleData();
+		private ConcertSeason season = new ConcertSeason();
+		private Concert concert = data.makeConcert();
 		
 	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
+	
+	public static void main(String[] args){
+		
+		SampleData data = new SampleData();
+		
+		Concert concert = data.makeConcert();
+		
+		System.out.println(concert.toString());
+		
+		System.out.println(concert.getId());
+	}
 
 }

@@ -17,7 +17,12 @@ public class Concert extends Id {
 	 */
 	public Concert() {
 	}
-	
+	/**
+	 * overloaded constructor
+	 * @param conductor
+	 * @param compositions
+	 * @param performs
+	 */
 	public Concert(Conductor conductor, ArrayList<Composition> compositions, ArrayList<Perform> performs){
 		setCompositions( compositions );
 		setConductor( conductor );
@@ -116,14 +121,14 @@ public class Concert extends Id {
 		}
 	}
 	
-	// TODO TODO TODO
 	/**
 	 * Override method for toString()
 	 */
 	@Override
 	public String toString() {
 		return "Concert [conductor=" + conductor 
-				+ ", compositions=" + compositions + "]";
+				+ ", compositions=" + compositions 
+				+ ", performaces=" + performances + "]";
 	}
 		
 		
