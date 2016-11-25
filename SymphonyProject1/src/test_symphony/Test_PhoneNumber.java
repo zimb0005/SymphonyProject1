@@ -79,7 +79,7 @@ System.out.print("\tExecuting Test_PhoneNumber.testConstructors");
 		phoneNumber.setPhoneNum("123-456-7890");
 		assertNotNull("\t\tTest_PhoneNumber.testBehaviors: PhoneNumber.toString", 
 				phoneNumber.toString());
-		assertEquals("123-456-7890", phoneNumber.toString());
+		assertEquals("PhoneNumber [phoneNum=123-456-7890]", phoneNumber.toString());
 		
 	}
 
