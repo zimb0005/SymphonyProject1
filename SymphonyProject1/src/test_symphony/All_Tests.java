@@ -30,33 +30,37 @@
 
 package test_symphony;
 
-
 import junit.framework.*;
 import symphony.*;
 
 /**
  * JUnit test class to execute all JUNIT tests for the "Symphony" project.
+ * 
  * @author R.Dyer modified by R.Zimbalatti
  */
 public class All_Tests extends TestCase {
 
-	public All_Tests(String name) { super(name);		}
+	public All_Tests(String name) {
+		super(name);
+	}
 
 	public static Test suite() {
 		TestSuite suite = new TestSuite();
-		//suite.addTest();
+		suite.addTest(Test_FinancialTransaction.suite());
+		suite.addTest(Test_IdGenerator.suite());
 		return suite;
 	}
 
-	/*	STAND-ALONE ENTRY POINT -----------------------------------------	*/
+	/* STAND-ALONE ENTRY POINT ----------------------------------------- */
 	/**
-	 *	Main line for stand-alone operation.
-	 *	@param	args	Standard string command line parameters.
+	 * Main line for stand-alone operation.
+	 * 
+	 * @param args
+	 *            Standard string command line parameters.
 	 */
-	 public static void main(String[] args) {
-        System.out.println("Executing AllTests ...");
-        junit.textui.TestRunner.run(suite());
-    }
+	public static void main(String[] args) {
+		System.out.println("Executing AllTests ...");
+		junit.textui.TestRunner.run(suite());
+	}
 
-}	/*	End of CLASS:	AllTests.java			*/
-
+} /* End of CLASS: AllTests.java */
