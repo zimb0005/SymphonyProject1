@@ -11,7 +11,7 @@ import org.junit.Before;
 /**
  * Unit test class. Exercise all of the constructors and methods for
  * the class Name.
- * @author Emma Jilesen
+ * @author Team 2
  * @version	1.0.0	November 2016
  */
 public class Test_Name extends TestCase {

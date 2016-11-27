@@ -8,21 +8,21 @@ import java.util.Date;
  * @author Team 2
  *@version 1.0.0	November 2016
  */
-public class Perform {
+public class Performance {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
 	
 	/**
 	 * default constructor
 	 */
-	public Perform(){
+	public Performance(){
 		super();
 	}
 	
 	/**
 	 * overloaded constructor
 	 */
-	public Perform(Soloist soloist,Composition composition, Date datePerformed){
+	public Performance(Soloist soloist,Composition composition, Date datePerformed){
 		this.soloist = soloist;
 		this.composition = composition;
 		this.datePerformed = datePerformed;

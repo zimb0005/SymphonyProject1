@@ -8,7 +8,7 @@ import symphony.Composition;
 import symphony.Concert;
 import symphony.Conductor;
 import symphony.Movement;
-import symphony.Perform;
+import symphony.Performance;
 import symphony.Soloist;
 
 
@@ -31,7 +31,7 @@ public class Test_Concert extends TestCase{
 		System.out.println("Test_" + name + " Begin");
 		concert = new Concert();
 		conductor = new Conductor();
-		performs = new ArrayList<Perform>();
+		performs = new ArrayList<Performance>();
 		movements = new ArrayList<Movement>();
 		compositions = new ArrayList<Composition>();
 		Movement m1 = new Movement("D Major",1);
@@ -42,7 +42,7 @@ public class Test_Concert extends TestCase{
 		Soloist soloist = new Soloist("Flute");
 		composition = new Composition(movements);
 		compositions.add(composition);
-		perform = new Perform(soloist,composition,date);
+		perform = new Performance(soloist,composition,date);
 		performs.add(perform);
 	}
 
@@ -127,8 +127,8 @@ public class Test_Concert extends TestCase{
 	private Concert concert = null;
 	private Conductor conductor = null;
 	private Composition composition = null;
-	private Perform perform = null;
-	private ArrayList<Perform> performs = null;
+	private Performance perform = null;
+	private ArrayList<Performance> performs = null;
 	private ArrayList<Movement> movements = null;
 	private ArrayList<Composition> compositions = null;
 	private static String name = "Concert";

@@ -10,7 +10,12 @@ import symphony.Ticket;
 import symphony.Venue;
 
 
-//Omar
+/**
+ * this class test the Venue class in symphony package
+ * @author Team 2
+ * @version 1.0.0	November 2016
+ *
+ */
 public class Test_Venue extends TestCase{
 	public Test_Venue(String name) {
 		super(name);
@@ -20,50 +25,38 @@ public class Test_Venue extends TestCase{
 	}
 	protected void setUp() throws Exception {
 		System.out.println("Test_Venue Begin");
+		d= new Date();
+		v = new Venue();
+		t = new ArrayList<Ticket>();
 	}
 
 	protected void tearDown() throws Exception {
 		System.out.println("Test_Venue End");
+		d = null;
+		v = null;
+		t = null;
 	}
 	/**
 	 * Test the constructors.
 	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Venue.testConstructors");
-		assertNotNull("\t\tTest_Venue.testConstructors: Test_Venue is null", venue);
-		System.out.println("\tCreating 5 tickets, using Ticket class...");
-		
-		Ticket t1 = new Ticket(125.20, 44, true, d);
-		Ticket t2 = new Ticket(225.20, 2, true, d);
-		Ticket t3 = new Ticket(125.20, 11, false, d);
-		Ticket t4 = new Ticket(225.20, 6, true, d);
-		Ticket t5 = new Ticket(225.20, 4, false, d);
-		
-		ArrayList<Ticket> tickets = new ArrayList<Ticket>();
-		
-		for(Ticket tic : tickets){
-			tickets.add(tic);
-		}
-		
-		Venue v = new Venue("name",536,tickets);
+		assertNotNull("\t\tTest_Venue.testConstructors: Test_Venue is null", v);
+		Venue v2 = new Venue("name",536,t);
+		assertNotNull("\t\tTest_Venue.testConstructors: Test_Venue is null", v2);
 	}
 	
 	/**
 	 * Test the accessors.
 	 */
 	public void testAccessors(){
-		testMutators();
 		System.out.println("\tExecuting Test_Venue.testAccessors");
-		assertNotNull("\t\tTest_Venue.testAccessors: Test_Venue is null", venue);
-		System.out.println("\tResult: ");
-		
-		System.out.println("\tVenue Name: "+venue.getVenueName() + "\n\tCapacity: "+venue.getCapacity()
-		+ "\n\tTickets: ");
-		
-		
-			for (int i = 0; i < 5; i++) {
-				System.out.println("\t\t"+tick.get(i).toString());
-			}
+		v.setTickets(t);
+		v.setVenueName("Name");
+		v.setCapacity(300);
+		assertEquals(v.getCapacity(),300);
+		assertEquals(v.getVenueName(),"Name");
+		assertEquals(v.getTickets(),t);
 		
 		
 	}
@@ -73,54 +66,19 @@ public class Test_Venue extends TestCase{
 	
 	public void testMutators(){
 		System.out.println("\tExecuting Test_Venue.testMutators");
-		assertNotNull("\t\tTest_Venue.testMutators: Test_Venue is null", venue);
-		System.out.println("\tLoading data...");
-		venue.setCapacity(986);
-		venue.setVenueName("THENAME");
-		Ticket t1 = new Ticket(125.20, 44, true, d);
-		Ticket t2 = new Ticket(225.20, 2, true, d);
-		Ticket t3 = new Ticket(125.20, 11, false, d);
-		Ticket t4 = new Ticket(225.20, 6, true, d);
-		Ticket t5 = new Ticket(225.20, 4, false, d);
-		
-		
-	
-		tick.add(t1);
-		tick.add(t2);
-		tick.add(t3);
-		tick.add(t4);
-		tick.add(t5);
-	
-	
-		venue.setTickets(tick);
+		v.setTickets(t);
+		v.setVenueName("Name");
+		v.setCapacity(300);
+		assertEquals(v.getCapacity(),300);
+		assertEquals(v.getVenueName(),"Name");
+		assertEquals(v.getTickets(),t);
 
 	}
 	/**
 	 * Test behaviors.
 	 */
 	public void testBehaviors(){
-		venue.setCapacity(986);
-		venue.setVenueName("THENAME");
-		Ticket t1 = new Ticket(125.20, 44, true, d);
-		Ticket t2 = new Ticket(225.20, 2, true, d);
-		Ticket t3 = new Ticket(125.20, 11, false, d);
-		Ticket t4 = new Ticket(225.20, 6, true, d);
-		Ticket t5 = new Ticket(225.20, 4, false, d);
-		
-		
-	
-		tick.add(t1);
-		tick.add(t2);
-		tick.add(t3);
-		tick.add(t4);
-		tick.add(t5);
-	
-	
-		venue.setTickets(tick);
-		System.out.println("\tExecuting Test_Venue.testBehaviors");
-		assertNotNull("\t\tTest_Venue.testBehaviors: Test_Venue is null", venue);
-		assertFalse(venue.getCapacity() == 987);
-		assertEquals(venue.getVenueName() , "THENAME");
+		assertEquals("Venue [transaction=null, venueName=null, capacity=0, tickets=null]",v.toString());
 		
 	}
 	/* STAND-ALONE ENTRY POINT ----------------------------------------- */
@@ -135,7 +93,7 @@ public class Test_Venue extends TestCase{
 		junit.textui.TestRunner.run(suite());
 		
 	}
-	private ArrayList<Ticket> tick = new ArrayList<Ticket>();
-	private Date d = new Date();
-	private Venue venue = new Venue();
+	private ArrayList<Ticket> t;
+	private Date d;
+	private Venue v;
 }

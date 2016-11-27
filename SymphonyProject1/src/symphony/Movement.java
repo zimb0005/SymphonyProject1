@@ -45,14 +45,6 @@ public class Movement {
 		return name;
 	}
 	
-	/**
-	 * getter for datePerformed
-	 * @return last date performed
-	 */
-	public Date getDatePerformed(){
-		return datePerformed;
-	}
-	
 	/* MODIFIERS	-----------------------------------------------------*/
 	
 	/**
@@ -69,14 +61,6 @@ public class Movement {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}
-	
-	/**
-	 * setter for datePerformed
-	 * @param name
-	 */
-	public void setDatePerformed(Date date) {
-		datePerformed = date;
 	}
 
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
@@ -100,12 +84,5 @@ public class Movement {
 	 * name of movement given by composer
 	 */
 	private String name;
-	
-	/**
-	 * date that movement was last performed by soloist
-	 */
-	private Date datePerformed;
-		
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 
 }

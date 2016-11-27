@@ -23,7 +23,7 @@ public class Concert extends Id {
 	 * @param compositions
 	 * @param performs
 	 */
-	public Concert(Conductor conductor, ArrayList<Composition> compositions, ArrayList<Perform> performs){
+	public Concert(Conductor conductor, ArrayList<Composition> compositions, ArrayList<Performance> performs){
 		setCompositions( compositions );
 		setConductor( conductor );
 		setPerformances( performs );
@@ -50,7 +50,7 @@ public class Concert extends Id {
 	 * getter for performs
 	 * @return list of performances of compositions by a soloist in a concert
 	 */
-	public ArrayList<Perform> getPerformances() {
+	public ArrayList<Performance> getPerformances() {
 		return performances;
 	}
 	/* MODIFIERS	-----------------------------------------------------*/
@@ -76,7 +76,7 @@ public class Concert extends Id {
 	 * setter for performs
 	 * @param performs
 	 */
-	public void setPerformances(ArrayList<Perform> performs) {
+	public void setPerformances(ArrayList<Performance> performs) {
 		this.performances = performs;
 	}
 	
@@ -105,9 +105,9 @@ public class Concert extends Id {
 	/**
 	 * adds a performance to the concert
 	 */
-	public void addPerformance(Perform perf){
+	public void addPerformance(Performance perf){
 		// if the performance list doesn't exist, create it
-		if (getPerformances() == null) setPerformances(new ArrayList<Perform>());
+		if (getPerformances() == null) setPerformances(new ArrayList<Performance>());
 		
 		getPerformances().add(perf);
 	}
@@ -115,7 +115,7 @@ public class Concert extends Id {
 	/**
 	 * removes performance from a concert
 	 */
-	public void removePerformance(Perform perf){
+	public void removePerformance(Performance perf){
 		if (getPerformances() != null) {
 			getPerformances().remove(perf);
 		}
@@ -147,7 +147,7 @@ public class Concert extends Id {
 	/**
 	 * list of compositions to be played by specific soloists
 	 */
-	private ArrayList<Perform> performances;	
+	private ArrayList<Performance> performances;	
 	
 
 }

@@ -10,7 +10,12 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-//Omar
+/**
+ * this class is designed to test the Ticket class in the symphony package
+ * @author team 2
+ * @version 1.0.0	November 2016
+ *
+ */
 public class Test_Ticket extends TestCase {
 	public Test_Ticket(String name) {
 		super(name);
@@ -22,10 +27,14 @@ public class Test_Ticket extends TestCase {
 	
 	protected void setUp() throws Exception {
 		System.out.println("Test_Ticket Begin");
+		ticket = new Ticket();
+		date = new Date();
 	}
 
 	protected void tearDown() throws Exception {
 		System.out.println("Test_Ticket End");
+		ticket = null;
+		date = null;
 	}
 
 	/**
@@ -33,23 +42,22 @@ public class Test_Ticket extends TestCase {
 	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Ticket.testConstructors");
-
-		Ticket testTicket = new Ticket(25.20, 5, true, date);
-
-		assertNotNull("\tTest_Ticket.testConstructors: Ticket is null", testTicket);
+		assertNotNull("\tTest_Ticket.testConstructors: Ticket is null", ticket);
 
 	}
 	/**
 	 * Test the accessors.
-	 * 
-	 * @throws ParseException
 	 */
-	public void testAccessors() throws ParseException {
-		testMutators();
+	public void testAccessors() {
 		System.out.println("\tExecuting Test_Ticket.testAccessors");
-		assertNotNull("\tTest_Ticket.testAccessors: Ticket is null", testTicket);
-		System.out.println("\tSeat Number: " + testTicket.getSeatNum() + "\n\tPrice: " + testTicket.getPrice()
-				+ "\n\tDate: " + dateformat.format(date) + "\n\tSold: " + testTicket.getSold());
+		ticket.setDate(date);
+		ticket.setPrice(55.00);
+		ticket.setSeatNum(10);
+		ticket.setSold(true);
+		assertEquals(ticket.getPrice(),55.00);
+		assertEquals(ticket.getDate(),date);
+		assertEquals(ticket.getSeatNum(),10);
+		assertEquals(ticket.getSold(),true);
 	}
 
 	/**
@@ -60,26 +68,21 @@ public class Test_Ticket extends TestCase {
 	public void testMutators() throws ParseException{
 		
 		System.out.println("\tExecuting Test_Ticket.testMutators");
-		assertNotNull("\tTest_Ticket.testMutators: Ticket is null", testTicket);
-		testTicket.setPrice(24.99);
-		testTicket.setSeatNum(16);
-		testTicket.setSold(true);
-		date = dateformat.parse("2016/11/30");
-		testTicket.setDate(date);
-
+		ticket.setDate(date);
+		ticket.setPrice(55.00);
+		ticket.setSeatNum(10);
+		ticket.setSold(true);
+		assertEquals(ticket.getPrice(),55.00);
+		assertEquals(ticket.getDate(),date);
+		assertEquals(ticket.getSeatNum(),10);
+		assertEquals(ticket.getSold(),true);
 	}
-
-	
-
 	/**
 	 * Test behaviors.
 	 */
 	public void testBehaviors() throws ParseException{
 		System.out.println("\tExecuting Test_Ticket.testBehaviors");
-		assertNotNull("\tTest_Ticket.testBehaviors: Ticket is null", testTicket);
-		assertTrue(testTicket.getSold() == false);
-		assertFalse(dateformat.format(date).equals("2016/11/31"));
-		System.out.println("Done!");
+		assertEquals("Ticket [price=0.0, seatNum=0, sold=false, date=null]",ticket.toString());
 	}
 
 	/* STAND-ALONE ENTRY POINT ----------------------------------------- */
@@ -95,7 +98,6 @@ public class Test_Ticket extends TestCase {
 		
 	}
 
-	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/mm/dd");
-	private Date date = new Date();
-	private Ticket testTicket = new Ticket();
+	private Date date;
+	private Ticket ticket;
 }

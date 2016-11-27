@@ -13,7 +13,8 @@ import symphony.Movement;
 
 /**
  * JUnit 4 Test Case for the Movement class in the symphony package.
- * @author imcalli
+ * @author Team 2
+ * @version 1.0.0	November 2016
  *
  */
 public class Test_Movement {
@@ -82,23 +83,10 @@ public class Test_Movement {
 		// modify number
 		movement.setNumber(2);
 		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Number was changed", 2, movement.getNumber());
-		
-		// modify date performed
-		Calendar cal = Calendar.getInstance();
-		cal.set(1990, 7, 28); // using my birthday as a test date :) (7 is august cause months start at 0?) -ian
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		
-		movement.setDatePerformed( cal.getTime() );
-		
-		assertEquals(
-			"\t\t" + TEST_NAME + TEST_BLOCK + ": Date performed was changed",
-			"1990-08-28",
-			sdf.format(movement.getDatePerformed())
-		);
 	}
 	
 	/**
-	 * Test behaviours.
+	 * Test behaviors.
 	 */
 	@Test
 	public void testBehaviours() {
