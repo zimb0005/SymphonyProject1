@@ -15,7 +15,22 @@ public class IdGenerator {
 		super();
 		nextId = 1;
 	}
-	
+	/* ACCESSOR	-----------------------------------------------------*/
+	/**
+	 * getter for nextId
+	 * @return next Id
+	 */
+	public static int getNextId(){
+		return nextId;
+	}
+	/**
+	 * setter for nextId
+	 * @param id
+	 */
+	/* MODIFIER	-----------------------------------------------------*/
+	public static void setNextId(int id){
+		nextId = id;
+	}
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	
 	/**
@@ -37,7 +52,7 @@ public class IdGenerator {
 	/**
 	 * id number that is incremented by one each time it is returned to the Id class
 	 */
-	private int nextId;
+	private static int nextId;
 	
 
 }
