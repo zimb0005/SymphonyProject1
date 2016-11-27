@@ -3,7 +3,7 @@ package symphony;
 /**
  * this class represents a soloist in a symphony
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Soloist extends Musician{
 	
@@ -52,6 +52,7 @@ public class Soloist extends Musician{
 	 */
 	@Override
 	public String toString() {
+		
 		return "Soloist [specialty=" + specialty + "]";
 	}
 		

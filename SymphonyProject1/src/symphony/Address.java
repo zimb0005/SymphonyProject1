@@ -3,6 +3,7 @@ package symphony;
 /**
  * This class represents the full address of an object
  * @author Team 2
+ * @version 1.0.0	November 2016
  *
  */
 
@@ -143,9 +144,6 @@ public class Address {
 	 * country
 	 */
 	private String country;
-	
-	
-/*	ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 	
 
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * class representing a concert that is scheduled for the future
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class ScheduledConcert extends Concert{
 	

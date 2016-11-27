@@ -6,7 +6,7 @@ import junit.framework.*;
 /**
  * Unit test class: exercise all of the constructors and methods
  * for the class Id.
- * @author Emma Jilesen
+ * @author Team 2
  * @version 1.0.0	November 2016
  */
 public class Test_Id extends TestCase {

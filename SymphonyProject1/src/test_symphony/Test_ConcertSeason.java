@@ -15,8 +15,8 @@ import symphony.ConcertSeason;
 
 /**
  * JUnit 4 Test Case for the ConcertSeason class in the symphony package.
- * @author imcalli
- *
+ * @author Team 2
+ *@version 1.0.0	November 2016
  */
 public class Test_ConcertSeason {
 
@@ -127,16 +127,20 @@ public class Test_ConcertSeason {
 		assertNotNull("\t\t" + TEST_NAME + TEST_BLOCK + ": ConcertSeason created", concertSeason);
 		
 		// test addConcert
-		// TODO
-		
+		concertSeason.addConcert(concert);
+		assertEquals(concertSeason.getConcerts().size(), 1);		
 		// test removeConcert
-		// TODO
+		concertSeason.removeConcert(concert);
+		assertEquals(concertSeason.getConcerts().size(), 0);
 	}
 	
 	/* ATTRIBUTES	-----------------------------------------------	*/
 	/** ConcertSeason object to use during testing. */
 	private ConcertSeason concertSeason = null;
-	
+	/**
+	 * Concert object to use during testing
+	 */
+	private Concert concert = new Concert();
 	/** Extract this test's name for use in console output. */
 	private final String TEST_NAME = this.getClass().getSimpleName();
 }

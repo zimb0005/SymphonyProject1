@@ -1,7 +1,13 @@
 package test_symphony;
 
 import symphony.Address;
+import symphony.AddressBuilder;
 import junit.framework.*;
+/**
+ * this class tests the Address class in symphony package
+ * @author Team 2
+ *@version 1.0.0	November 2016
+ */
 
 public class Test_Address extends TestCase {
 	
@@ -12,12 +18,13 @@ public class Test_Address extends TestCase {
 		protected void setUp() throws Exception { 
 			System.out.println("Test_Address Begin");
 			address = new Address();
-			//:TODO*************
+			address2 = new Address(builder);
 		}
 
 		protected void tearDown() throws Exception { 
 			System.out.println("Test_Address End");
 			address = null;
+			address2 = null;
 		}
 
 		/**
@@ -26,7 +33,7 @@ public class Test_Address extends TestCase {
 		public void testConstructors() {
 			System.out.println("\tExecuting Test_Address.testConstructors");
 			assertNotNull("\t\tTest_Address.testConstructors: Address is null", address);
-			//:TODO***************
+			assertNotNull("\t\tTest_Address.testConstructors: Address is null", address2);
 		}
 
 		/**
@@ -34,8 +41,16 @@ public class Test_Address extends TestCase {
 		 */
 		public void testAccessors() {
 			System.out.println("\tExecuting Test_Address.testAccessors");
-			//:TODO****************
-			
+			address.setStreetNum("123");
+			address.setCity("Ottawa");
+			address.setCountry("Canada");
+			address.setProvince("Ontario");
+			address.setStreetName("Macy Blvd");
+			assertEquals("123",address.getStreetNum());
+			assertEquals("Ottawa",address.getCity());
+			assertEquals("Canada",address.getCountry());
+			assertEquals("Ontario",address.getProvince());
+			assertEquals("Macy Blvd",address.getStreetName());
 		}
 
 		/**
@@ -43,7 +58,16 @@ public class Test_Address extends TestCase {
 		 */
 		public void testMutators() {
 			System.out.println("\tExecuting Test_Address.testMutators");
-			//:TODO********************
+			address.setStreetNum("123");
+			address.setCity("Ottawa");
+			address.setCountry("Canada");
+			address.setProvince("Ontario");
+			address.setStreetName("Macy Blvd");
+			assertEquals("123",address.getStreetNum());
+			assertEquals("Ottawa",address.getCity());
+			assertEquals("Canada",address.getCountry());
+			assertEquals("Ontario",address.getProvince());
+			assertEquals("Macy Blvd",address.getStreetName());
 		}
 
 		/**
@@ -51,8 +75,8 @@ public class Test_Address extends TestCase {
 		 */
 		public void testBehaviors() {
 			System.out.println("\tExecuting Test_Address.testBehaviors");
-			//:TODO*******************
-		}
+			assertEquals(address.toString(),"Address [streetNum=null, streetName=null, city=null, province=null, country=null]");		
+			}
 
 		/*	STAND-ALONE ENTRY POINT -----------------------------------------	*/
 		/**
@@ -66,6 +90,8 @@ public class Test_Address extends TestCase {
 
 		/* ATTRIBUTES	-----------------------------------------------	*/
 		private Address address = null;
+		private Address address2 = null;
+		private AddressBuilder builder = new AddressBuilder();
 
 	}	/*	End of CLASS:	Test_Address.java				*/
 

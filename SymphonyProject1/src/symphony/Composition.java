@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * this class represents a composition that can be played at a concert
  * @author Team 2
+ * @version 1.0.0	November 2016
  */
 public class Composition extends Id {
 
@@ -14,12 +15,13 @@ public class Composition extends Id {
 	 * default constructor
 	 */
 	public Composition(){
-		super();
 		setMovements( new ArrayList<Movement>() ); // set empty array if none is given in constructor
 	}
-	
+	/**
+	 * overloaded constructor
+	 * @param movements
+	 */
 	public Composition(ArrayList<Movement> movements){
-		super();
 		setMovements(movements); // set array given in constructor
 	}
 	
@@ -54,6 +56,25 @@ public class Composition extends Id {
 	public String toString() {
 		return "Composition [movements=" + movements + "]";
 	}
+	/**
+	 * add a movement to the arraylist
+	 * @param movement
+	 */
+	public void addMovement(Movement movement){
+		movements.add(movement);
+	}
+	/**
+	 * removes movement from array with specified movement number
+	 * @param number
+	 */
+	public void removeMovement(int number){
+		for(Movement m:movements){
+			if(m.getNumber() == number ){
+				movements.remove(m);
+			}
+			break;
+		}
+	}
 			
 	/* ATTRIBUTES--------------------------------------------------------*/
 	
@@ -62,5 +83,4 @@ public class Composition extends Id {
 	 */
 	private ArrayList<Movement> movements;		
 		
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * class represents a performed concert so it will have a past date
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class PerformedConcert extends Concert {
 	

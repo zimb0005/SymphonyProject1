@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * this class represents movement that are contained in compositions
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Movement {
 	

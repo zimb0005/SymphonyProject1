@@ -4,8 +4,8 @@ import java.util.Date;
 
 /**
  * this class represents a ticket that a venue has for a seat on a certain date
- * @author ron
- *
+ * @author team 2
+ *@version 1.0.0	November 2016
  */
 public class Ticket {
 	

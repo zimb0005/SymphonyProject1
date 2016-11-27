@@ -3,7 +3,7 @@ package symphony;
 /**
  * this class represents people involved in the symphony
  * @author Team2
- *
+ *@version 1.0.0	November 2016
  */
 public class Musician extends Id {
 	

@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * this class associates a soloist, with a composition and a date performed to record a performance
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Perform {
 	

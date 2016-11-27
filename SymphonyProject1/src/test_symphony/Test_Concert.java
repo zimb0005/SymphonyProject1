@@ -12,7 +12,11 @@ import symphony.Perform;
 import symphony.Soloist;
 
 
-//robert
+/**
+ * test class for Concert class in symphony package
+ * @author Team 2
+ *@version 1.0.0	November 2016
+ */
 public class Test_Concert extends TestCase{
 
 	public Test_Concert(String name){

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * this class represents a season of concerts
  * @author Team2
- *
+ *@version 1.0.0	November 2016
  */
 public class ConcertSeason {
 	
@@ -23,7 +23,6 @@ public class ConcertSeason {
 	 * Overloaded constructor
 	 */
 	public ConcertSeason(Date openingDate, int lengthInDays){
-		super();
 		this.openingDate = openingDate;
 		this.lengthInDays = lengthInDays;	
 	}
@@ -94,9 +93,9 @@ public class ConcertSeason {
 	/**
 	 * removes concert to season
 	 */
-	public void removeConcert(Concert con) {
+	public void removeConcert(Concert concert) {
 		if (getConcerts() != null) {
-			getConcerts().remove(con);
+			getConcerts().remove(concert);
 		}
 	}
 	

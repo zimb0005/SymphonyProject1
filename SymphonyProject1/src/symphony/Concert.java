@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * this class represents a concert that can be added to a season
  * @author Team2
- *
+ *@version 1.0.0	November 2016
  */
 
 public class Concert extends Id {
@@ -149,6 +149,5 @@ public class Concert extends Id {
 	 */
 	private ArrayList<Perform> performances;	
 	
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 
 }

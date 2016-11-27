@@ -1,5 +1,9 @@
 package symphony;
-
+/**
+ * this class represents an id that children class will inheret from
+ * @author Team 2
+ *@version 1.0.0	November 2016
+ */
 public class Id {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------*/
@@ -58,17 +62,5 @@ public class Id {
 	 */
 	 private int id;
 	
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
-	 
-		//THIS IS ONLY FOR DEVELOPMENT PURPOSES TO TEST THE CLASS IT IS NOT TO BE INCLUDED IN PROJECT
-		public static void main(String[] args){
-			
-			for(int i =0; i<5;i++){
-				Id id = new Id();
-				System.out.println(id.toString());
-			}
-			
-			
-		}
 
 }

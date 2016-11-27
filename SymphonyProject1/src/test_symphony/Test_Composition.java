@@ -13,8 +13,8 @@ import symphony.Movement;
 
 /**
  * JUnit 4 Test Case for the Composition class in the symphony package.
- * @author imcalli
- *
+ * @author Team 2
+ *@version 1.0.0	November 2016
  */
 public class Test_Composition {
 
@@ -92,12 +92,24 @@ public class Test_Composition {
 		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Movement name is correct", "TestMovement", test.getName());
 		assertEquals("\t\t" + TEST_NAME + TEST_BLOCK + ": Movement number is correct", 1, test.getNumber());
 	}
+	/**
+	 * Test Behaviors
+	 */
+	@Test
+	public void testBehaviours(){
+		composition = new Composition();
+		composition.addMovement(movement);
+		assertEquals(composition.getMovements().size(),1);
+		composition.removeMovement(1);
+		assertEquals(composition.getMovements().size(),0);
+	}
 	
 	
 	
 	/* ATTRIBUTES	-----------------------------------------------	*/
 	/** Composition object to use during testing. */
 	private Composition composition = null;
+	private Movement movement = new Movement("TestName",1);
 	
 	/** Extract this test's name for use in console output. */
 	private final String TEST_NAME = this.getClass().getSimpleName();

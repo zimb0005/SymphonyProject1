@@ -3,7 +3,7 @@ package symphony;
 /**
  * class represents a phone number 
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class PhoneNumber {
 	

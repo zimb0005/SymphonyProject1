@@ -3,7 +3,7 @@ package symphony;
 /**
  * this class is used to store the name of objects representing people
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Name {
 	

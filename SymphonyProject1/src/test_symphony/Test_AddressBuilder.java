@@ -3,9 +3,14 @@ package test_symphony;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.Address;
 import symphony.AddressBuilder;
 
-//Omar
+/**
+ * tests the AddressBuilder class in the symphony package
+ * @author Team 2
+ *@version 1.0.0	November 2016
+ */
 public class Test_AddressBuilder extends TestCase{
 	public Test_AddressBuilder(String name) {
 		super(name);
@@ -17,35 +22,51 @@ public class Test_AddressBuilder extends TestCase{
 	
 	protected void setUp() throws Exception {
 		System.out.println("Test_AddressBuilder Begin");
+		addressBuilder = new AddressBuilder();
 	}
 
 	protected void tearDown() throws Exception {
 		System.out.println("Test_AddressBuilder End");
+		addressBuilder = null;
 	}
 	/**
 	 * Test the constructors.
 	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_AddressBuilder.testConstructors");
-		assertNotNull("\t\tTest_AddressBuilder.testConstructors: Test_AddressBuilder is null", AB);
-		AddressBuilder ab = new AddressBuilder();
+		assertNotNull("\t\tTest_AddressBuilder.testConstructors: Test_AddressBuilder is null", addressBuilder);
 	}
 	/**
 	 * Test the accessors.
 	 */
 	public void testAccessors(){
 		System.out.println("\tExecuting Test_AddressBuilder.testAccessors");
-		testMutators();
-		assertNotNull("\t\tTest_AddressBuilder.testAccessors: Test_AddressBuilder is null", AB);
-		System.out.println(AB.toString());
+		addressBuilder.setStreetNum("123");
+		addressBuilder.setCity("Ottawa");
+		addressBuilder.setCountry("Canada");
+		addressBuilder.setProvince("Ontario");
+		addressBuilder.setStreetName("Macy Blvd");
+		assertEquals("123",addressBuilder.getStreetNum());
+		assertEquals("Ottawa",addressBuilder.getCity());
+		assertEquals("Canada",addressBuilder.getCountry());
+		assertEquals("Ontario",addressBuilder.getProvince());
+		assertEquals("Macy Blvd",addressBuilder.getStreetName());
 	}
 	/**
 	 * Test the mutators/modifiers.
 	 */
 	public void testMutators(){
 		System.out.println("\tExecuting Test_AddressBuilder.testMutators");
-		assertNotNull("\t\tTest_AddressBuilder.testMutators: Test_AddressBuilder is null", AB);
-		AB.city("Ottawa").country("Canada").province("Ontario").streetNum("44").streetName("Woodroffe").build();
+		addressBuilder.setStreetNum("123");
+		addressBuilder.setCity("Ottawa");
+		addressBuilder.setCountry("Canada");
+		addressBuilder.setProvince("Ontario");
+		addressBuilder.setStreetName("Macy Blvd");
+		assertEquals("123",addressBuilder.getStreetNum());
+		assertEquals("Ottawa",addressBuilder.getCity());
+		assertEquals("Canada",addressBuilder.getCountry());
+		assertEquals("Ontario",addressBuilder.getProvince());
+		assertEquals("Macy Blvd",addressBuilder.getStreetName());
 		
 	}
 	/**
@@ -53,13 +74,14 @@ public class Test_AddressBuilder extends TestCase{
 	 */
 	public void testBehaviors(){
 		System.out.println("\tExecuting Test_AddressBuilder.testBehaviors");
-		assertNotNull("\t\tTest_AddressBuilder.testBehaviors: Test_AddressBuilder is null", AB);
-		AddressBuilder AB = new AddressBuilder();
-		AB.city("Ottawa").country("Canada").province("Ontario").streetNum("44").streetName("Woodroffe").build();
-		assertTrue(AB.getCity() == "Ottawa");
-		assertTrue(AB.getCountry() == "Canada");
-		assertTrue(AB.getStreetNum() == "44");
-		assertEquals(AB.getStreetNum(),"44");
+		addressBuilder.city("Ottawa").country("Canada").province("Ontario").streetNum("44").streetName("Woodroffe").build();
+		assertTrue(addressBuilder.getCity() == "Ottawa");
+		assertTrue(addressBuilder.getCountry() == "Canada");
+		assertTrue(addressBuilder.getStreetNum() == "44");
+		assertEquals(addressBuilder.getStreetNum(),"44");
+		address = addressBuilder.build();
+		assertNotNull(address);
+		assertEquals("AddressBuilder [streetNum=44, streetName=Woodroffe, city=Ottawa, province=Ontario, country=Canada]",addressBuilder.toString());
 		
 	}
 	/* STAND-ALONE ENTRY POINT ----------------------------------------- */
@@ -76,5 +98,7 @@ public class Test_AddressBuilder extends TestCase{
 	}
 	
 	
-	private AddressBuilder AB = new AddressBuilder();
+	private AddressBuilder addressBuilder;
+	private Address address;
+	
 }

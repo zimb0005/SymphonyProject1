@@ -2,7 +2,7 @@ package symphony;
 /**
  * class represents the conductor which is a type of musician
  * @author Team2
- *
+ *@version 1.0.0	November 2016
  */
 public class Conductor extends Musician  {
 	
@@ -15,11 +15,6 @@ public class Conductor extends Musician  {
 		super();
 	}
 	
-	/* ACCESSORS	-----------------------------------------------------*/
-		
-
-	/* MODIFIERS	-----------------------------------------------------*/
-		
 
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	

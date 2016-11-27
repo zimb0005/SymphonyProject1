@@ -2,7 +2,7 @@ package symphony;
 /**
  * this class acts as the controller for the system implementing all the use cases
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Controller {
 	
@@ -16,10 +16,50 @@ public class Controller {
 	}
 
 	/* ACCESSORS	-----------------------------------------------------*/
-		
+	/**
+	 * getter for data
+	 * @return data
+	 */
+	public SampleData getData() {
+		return data;
+	}
+	/**
+	 * getter for season
+	 * @return season
+	 */
+	public ConcertSeason getSeason() {
+		return season;
+	}
+	/**
+	 * getter for concert
+	 * @return concert
+	 */
+	public Concert getConcert() {
+		return concert;
+	}
 
 	/* MODIFIERS	-----------------------------------------------------*/
-		
+	/**
+	 * setter for data
+	 * @param data
+	 */
+	public void setData(SampleData data) {
+		this.data = data;
+	}
+	/**
+	 * setter for season
+	 * @param season
+	 */
+	public void setSeason(ConcertSeason season) {
+		this.season = season;
+	}
+	/**
+	 * setter for concert
+	 * @param concert
+	 */
+	public void setConcert(Concert concert) {
+		this.concert = concert;
+	}	
 
 	/* NORMAL BEHAVIOR -------------------------------------------------*/
 	/**
@@ -28,25 +68,35 @@ public class Controller {
 	public void addConcert(){
 	season.addConcert(concert);
 	}
-	
+	/**
+	 * method to remove a concert form a season
+	 */
 	public static void removeConcert(){};
-		
+	/**
+	 * schedule a concert with a date and venue
+	 */
+	public static void scheduleConcert(){};
+	/**
+	 * Unschedule a concert
+	 */
+	public static void unScheduleConcert(){};
+	/**
+	 * print a concert season
+	 */
+	public static void printConcertSeason(){};
 	/* ATTRIBUTES--------------------------------------------------------*/
-		private SampleData data = new SampleData();
-		private ConcertSeason season = new ConcertSeason();
-		private Concert concert = data.makeConcert();
+	/**
+	 * instance of class used to generate a concert
+	 */
+	private SampleData data;
+	/**
+	 * concert season
+	 */
+	private ConcertSeason season;
+	/**
+	 * concert 
+	 */
+	private Concert concert;
 		
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
-	
-	public static void main(String[] args){
-		
-		SampleData data = new SampleData();
-		
-		Concert concert = data.makeConcert();
-		
-		System.out.println(concert.toString());
-		
-		System.out.println(concert.getId());
-	}
 
 }

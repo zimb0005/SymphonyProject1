@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * class representing a venue that will host a concert
  * @author Team 2
- *
+ *@version 1.0.0	November 2016
  */
 public class Venue {
 	

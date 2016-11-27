@@ -3,6 +3,7 @@ package symphony;
 /**
  * This class is used to implement the builder design pattern to create Address objects
  * @author Team 2
+ * @version 1.0.0	November 2016
  *
  */
 
@@ -196,8 +197,5 @@ public class AddressBuilder {
 	 * country
 	 */
 	private String country;
-		
-		
-	/* ENTRY POINT for STAND-ALONE OPERATION ---------------------------*/
 
 }
